@@ -24,7 +24,6 @@ const ListView = ({ actions, children, columns, endpoint }) => {
 
   useEffect(() => {
     getData();
-    'react-hooks/exhaustive-deps'
   }, []);
 
   return (
