@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Courses from "./pages/Courses";
-//import Departament from "./pages/Departament";
+import Departament from "./pages/Department";
 //import Professor from "./pages/Professor";
 //import Allocation from "./pages/Allocation";
 
@@ -19,15 +19,15 @@ const routes = [
     name: "Courses",
     component: Courses,
   },
+  {
+    path: "/departaments",
+    name: "Departaments",
+    component: Departament,
+  },
   // {
   //   path: "/professor",
   //   name: "Professor",
   //   component: Professor,
-  // },
-  // {
-  //   path: "/departament",
-  //   name: "Departament",
-  //   component: Departament,
   // },
   // {
   //   path: "/allocations",
