@@ -14,8 +14,8 @@ const columns = [
     { value: "CPF", id: "cpf" },
     {
       value: "Department",
-      id: "departmentId",
-      //render: (department) => department.name,
+      id: "department",
+      render: (department) => department.name,
     },
 ];
 
