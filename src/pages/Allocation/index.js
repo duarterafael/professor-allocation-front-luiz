@@ -73,6 +73,11 @@ const INITIAL_STATE = {
   courseId: "",
 };
 
+function formatTime(time){
+  const formatedTime = time.replace("-0300","")
+  return formatedTime;
+}
+
 const Allocation = () => {
   const [allocation, setAllocation] = useState(INITIAL_STATE);
   const [visible, setVisible] = useState(false);
@@ -109,8 +114,8 @@ const Allocation = () => {
         setAllocation({
           id,
           dayOfWeek,
-          endHour,
-          startHour,
+          endHour:formatTime(endHour),
+          startHour:formatTime(startHour),
           professorId,
           //departmentId,
           courseId,
@@ -158,13 +163,14 @@ const Allocation = () => {
                   
     courseId: Number(allocation.courseId),
     dayOfWeek: allocation.dayOfWeek,
-    endHour: allocation.endHour + "+0000",
+    endHour: allocation.endHour,
     professorId: Number(allocation.professorId),
-    startHour: allocation.startHour + "+0000",
+    startHour: allocation.startHour,
    
   };
 
   const onChange = ({ target: { name, value } }) => {
+    console.log({value})
     setAllocation({
       ...allocation,
       [name]: value,
