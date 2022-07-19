@@ -25,8 +25,8 @@ const routes = [
     component: Departament,
   },
   {
-     path: "/professor",
-     name: "Professor",
+     path: "/professors",
+     name: "Professors",
      component: Professor,
    },
    {

@@ -25,11 +25,11 @@ const columns = [
     id: "professor",
     render: (professor) => professor?.department?.name,
   },
-  //   {
-  //     value: "Course",
-  //     id: "course",
-  //     render: (course) => course?.name,
-  //   },
+    {
+      value: "Course",
+      id: "course",
+      render: (course) => course?.name,
+    },
 ];
 
 const daysOfWeek = [
@@ -69,7 +69,7 @@ const INITIAL_STATE = {
   endHour: "",
   startHour: "",
   professorId: "",
-  departmentId: "",
+  //departmentId: "",
   courseId: "",
 };
 
@@ -103,7 +103,7 @@ const Allocation = () => {
         endHour,
         startHour,
         professor: { id: professorId },
-        department: { id: departmentId },
+        //department: { id: departmentId },
         course: { id: courseId },
       }) => {
         setAllocation({
@@ -112,7 +112,7 @@ const Allocation = () => {
           endHour,
           startHour,
           professorId,
-          departmentId,
+          //departmentId,
           courseId,
         });
         setVisible(true);
@@ -154,6 +154,16 @@ const Allocation = () => {
     }
   };
 
+  const data = {
+                  
+    courseId: Number(allocation.courseId),
+    dayOfWeek: allocation.dayOfWeek,
+    endHour: allocation.endHour,
+    professorId: Number(allocation.professorId),
+    startHour: allocation.startHour,
+   
+  };
+
   const onChange = ({ target: { name, value } }) => {
     setAllocation({
       ...allocation,
@@ -190,6 +200,7 @@ const Allocation = () => {
                   onChange={onChange}
                   value={allocation.dayOfWeek}
                 >
+                  <option>Select one day of week</option>
                   {daysOfWeek.map(({ id, name }, index) => (
                     <option key={index} value={id}>
                       {name}
