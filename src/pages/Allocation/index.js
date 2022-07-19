@@ -158,9 +158,9 @@ const Allocation = () => {
                   
     courseId: Number(allocation.courseId),
     dayOfWeek: allocation.dayOfWeek,
-    endHour: allocation.endHour,
+    endHour: allocation.endHour + "+0000",
     professorId: Number(allocation.professorId),
-    startHour: allocation.startHour,
+    startHour: allocation.startHour + "+0000",
    
   };
 
