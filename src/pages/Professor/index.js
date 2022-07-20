@@ -81,7 +81,7 @@ const Professor = () => {
       } else {
         await api.post(endpoint, data);
 
-        toast.success("Departamento foi cadastrado com sucesso!");
+        toast.success("Professor cadastrado com sucesso!");
       }
       setVisible(false);
 
