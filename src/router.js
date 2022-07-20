@@ -15,6 +15,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/allocations",
+    name: "Allocations",
+    component: Allocation,
+  },
+  {
     path: "/courses",
     name: "Courses",
     component: Courses,
@@ -28,11 +33,6 @@ const routes = [
      path: "/professors",
      name: "Professors",
      component: Professor,
-   },
-   {
-     path: "/allocations",
-     name: "Allocations",
-     component: Allocation,
    },
 ];
 
